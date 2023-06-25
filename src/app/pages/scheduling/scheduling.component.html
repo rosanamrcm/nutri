@@ -3,91 +3,98 @@
         <div class="nutri">
             <img src="../assets/icons/logo-secondary.svg" alt="Nutri">
         </div>
-        <div class="initial-letters">
-            <img src="../assets/icons//letters.png" alt="letters" class="letters">
-        </div>   
+        <div class="initial-log">
+            <div class="initial-letters">
+                <h1>GC</h1>  
+            </div>
+            <button type="button" class="btn" (click)="logout()">Sair</button>
+        </div>
     </div>
     <div class="schedule">
         <h2>Agendadas</h2>
-        <div class="add">
-            <img src="../assets/icons/add_circle.png" alt="add_circle" class="add_circle">
-            <h6>Nova consulta</h6>
-        </div>
+        <div>
+            <button class="add">
+                <img src="../assets/icons/add.svg" alt="add_circle" class="add_circle">
+                <h6>Nova consulta</h6>
+            </button>          
+        </div>      
     </div>
     <div class="header-box">
-        <div class="sub-header-box">
-            <h6>LOCAL</h6>
-            <h6>PROFISSIONAL</h6>
-            <h6>DATA</h6>
-            <h6>HORÁRIO</h6>
+        <div class="sub-header-box" >
+            <div class=local>
+                <h6>LOCAL</h6>
+            </div>
+            <div class=professional>
+                <h6>PROFISSIONAL</h6>
+            </div>
+            <div class=date>
+                <h6>DATA</h6>
+            </div>
+            <div class=hour>
+                <h6>HORÁRIO</h6>
+            </div>
         </div>
     </div>
-    <div class="info">
-        <div class="info-box">
-            <img src="../assets/icons/vector3.png" alt="vector3" class="vector3">
-            <h6>CLINICA DE SAÚDE PREVENTIVA</h6>
+    <div class="info" *ngFor="let scheduled of listScheduled">
+       <div class="info-box">
+            <img src="../assets/icons/local.svg" alt="local" class="local-icon">
+            <h6>{{scheduled.local}}</h6>
         </div>
         <div class="info-box">
-            <h6>Edson Gabriel de Castro Pinheiro</h6>
+            <h6>{{scheduled.professional}}</h6>
         </div>
         <div class="info-box">
-            <h6>01/01/2023</h6>
+            <h6>{{scheduled.date_appoiment}}</h6>
         </div>
         <div class="info-box">
-            <h6>14:45</h6>
+            <h6>{{scheduled.time}}</h6>
         </div>
         <div class="info-box">
-            <img src="../assets/icons/vector4.png" alt="vector4" class="vector4">
+            <img src="../assets/icons/markoff.svg" alt="markoff" class="markoff">
             <h6>Desmarcar</h6>
-        </div>
-    </div>
-    <div class="info">
-        <div class="info-box">
-            <img src="../assets/icons/vector3.png" alt="vector3" class="vector3">
-            <h6>CLINICA DE SAÚDE PREVENTIVA</h6>
-        </div>
-        <div class="info-box">
-            <h6>Edson Gabriel de Castro Pinheiro</h6>
-        </div>
-        <div class="info-box">
-            <h6>01/01/2023</h6>
-        </div>
-        <div class="info-box">
-            <h6>14:45</h6>
-        </div>
-        <div class="info-box">
-            <img src="../assets/icons/vector4.png" alt="vector4" class="vector4">
-            <h6>Desmarcar</h6>
-        </div>
+        </div>      
     </div>
     <div class="schedule2">
         <h2>Histórico de Consultas</h2>
     </div>
     <div class="header-box">
         <div class="sub-header-box">
-            <h6>PROFISSIONAL</h6>
-            <h6 class="date">DATA DA CONSULTA</h6>
-            <h6>PESO DO PACIENTE</h6>
-            <h6 class="percent">PORCENTAGEM DE GORDURA</h6>
-            <h6>MASSA MAGRA</h6>
-        </div>
-    </div>
-    <div class="info">
-        <div class="sub-info-box">
-            <h6>Edson Gabriel de Castro Pinheiro</h6>
-            <div class="sub-info-box2">
-                <img src="../assets/icons/vector3.png" alt="vector3" class="vector3">
-                <h6>CLINICA DE SAÚDE PREVENTIVA</h6>
+            <div class="professional2">
+                <h6>PROFISSIONAL</h6>
+            </div>
+            <div class="date2">
+                <h6>DATA DA CONSULTA</h6>
+            </div>
+            <div class="weight">
+                <h6>PESO DO PACIENTE</h6>
+            </div>
+            <div class="percent">
+                <h6>PORCENTAGEM DE GORDURA</h6>
+            </div>
+            <div class="mass">
+                <h6>MASSA MAGRA</h6>
             </div>
         </div>
+    </div>
+    <div class="info" *ngFor="let appoimentHistory of listAppoimentHistory">
+        <div class="sub-info-box">
+            <h6>{{ appoimentHistory. professional_2 }}</h6>
+            <div class="sub-info-box2">
+                <img src="../assets/icons/local.svg" alt="local" class="local-icon">
+                <h6>{{ appoimentHistory.local_2 }}</h6>
+            </div>
+        </div>       
         <div class="info-box">
-            <h6>27/08/2022</h6>
+            <h6>{{ appoimentHistory.date_appoiment_2 }}</h6>
         </div>
         <div class="info-box">
-            <h6>79Kg</h6>
+            <h6>{{ appoimentHistory.weight }} kg</h6>
         </div>
         <div class="info-box">
-            <h6>39Kg</h6>
+            <h6>{{ appoimentHistory.bf }}</h6>
+        </div>
+        <div class="info-box">
+            <h6>{{ appoimentHistory.weight_mass }} kg</h6>
         </div>
         <div class="info-box">
             <h6>Ver detalhes</h6>

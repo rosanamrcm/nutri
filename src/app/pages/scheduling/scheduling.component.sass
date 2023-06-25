@@ -1,68 +1,110 @@
 .container
     width: 100%
-    height: 100%
     box-sizing: border-box
     display: flex
     flex-direction: column
-
-.toolbar, .schedule, .schedule2
+    padding-bottom: 300px
+   
+.toolbar
     width: 100%
     height: 80px
+    box-sizing: border-box
     display: flex
     flex-direction: row
     justify-content: space-between
-    box-sizing: border-box
-
-.toolbar
+    align-items: center  
     background-color: rgba(31, 138, 112, 1)
 
 .nutri
-    width: 10%
-    height: 40px
-    padding-top: 10px
-    padding-left: 40px
+    width: 20px
+    height: 60px
     display: flex
     flex-direction: row
     align-items: center
- 
+    padding-left: 40px
+
+.initial-log
+    width: 200px
+    height: 70px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    justify-content: center
+    align-items: center
+    margin-right:5px
+
 .initial-letters
-    width: 55px
-    height: 55px
-    margin-top: 2px
-    margin-right: 60px
-    margin-bottom: 2px
-    border-radius: 100%
-    background-color: rgba(254, 249, 249, 1)
+    width: 60px
+    height: 60px
     display: flex
     justify-content: center
-    
-.letters
-    width: 30px
-    height: 30px
-    margin-top: 15px
+    align-items: center
+    margin-top:10px
+    margin-right: 30px
+    margin-bottom: 10px
+    border-radius: 100%
+    background: rgba(254, 249, 249, 1)
 
-.schedule h2, .schedule2 h2
-    margin-top: 30px
-    margin-left: 50px
+.initial-letters h1
+    font-size: 20px
+    font-weight: 700
+    line-height: 23px
+    letter-spacing: 0em
+    color: rgba(31, 138, 112, 1)
+
+.btn 
+    width: 100px
+    height: 35px
+    box-sizing: border-box
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    font-size: 15px
+    font-weight: 700
+    line-height: 23px
+    letter-spacing: 0em
+    border-radius: 4px
+    border: none
+    cursor: pointer
+    color: rgba(31, 138, 112, 1)
+  
+
+.schedule, .schedule2
+    width: 100%
+    height: 180px
+    box-sizing: border-box
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center 
+    padding-left: 50px
+
+.schedule
+    margin-bottom: 1px
+
+.schedule h2
     font-family: Roboto
     font-size: 32px
     font-weight: 700
     line-height: 38px
     letter-spacing: 0em
-    text-align: left
-    color:#444444
-
+    text-align: center
+    color: rgba(68, 68, 68, 1)
+   
 .add
     width: 150px
     height: 35px
-    box-sizing: border-box 
-    margin-top: 20px
-    margin-right: 28px
-    border-radius: 4px
+    box-sizing: border-box
     display: flex
     flex-direction: row
     justify-content: center
     align-items: center
+    margin-right: 28px
+    margin-bottom: 10px
+    border-radius: 4px
+    border: none
+    cursor: pointer
     background-color: rgba(31, 138, 112, 1)
 
 .add_circle
@@ -70,12 +112,11 @@
     height: 19px
     margin-top: 1.5px
     margin-right:3px
-    border-radius: 0px
     color:rgba(245, 245, 245, 1)
 
 .add h6
-    margin-left: 2px
     font-family: Roboto
+    margin-left: 2px
     font-size: 13px
     font-weight: 700
     line-height: 23px
@@ -85,53 +126,63 @@
 
 .header-box
     width: 95.4%
-    height: 90px
+    height: 70px
     box-sizing: border-box
-    margin-top: 10px
     margin-left: 40px
     border-radius: 4px
     background-color: rgba(31, 138, 112, 1)
 
 .sub-header-box
     width: 70%
-    height: 40px
-    margin-top: 20px
-    margin-left: 30px
-    padding-left: 10px
+    height: 50px
     display: flex
     flex-direction: row
     justify-content: space-between
-    font-family: Poppins
-    font-size: 20px
+    align-items: center
+    margin-top: 15px
+    margin-left: 30px
+    
+.local, .professional, .date, .hour      
+    margin-bottom: 10px
+    font-size: 14px
     font-weight: 600
     line-height: 21px
     letter-spacing: 0em
-    text-align: center
     color: rgba(255, 255, 255, 1)
+
+.professional
+    margin-left: 120px
+
+.date
+    margin-left: 110px
+    margin-right: 110px
+
+.hour
+    margin-right: 90px
    
 .info
     width: 95.4%
     height: 60px
     box-sizing: border-box
-    margin-top: 10px
-    margin-left: 40px
-    border-radius: 4px
     display: flex
     flex-direction: row
     justify-content: space-around
     box-shadow: 5px 5px 3px grey
+    margin-top: 10px
+    margin-left: 40px
+    border-radius: 4px
     background-color: rgba(255, 255, 255, 1)
    
 .info-box
     width: 200px
     height: 27px
-    margin-top: 20px
     display: flex
     flex-direction: row
     text-align: center
-  
+    margin-top: 20px
+    margin-bottom: 30px
+
 .info-box h6, .sub-info-box h6, .sub-info-box2 h6
-    font-family: Roboto
     font-size: 10px
     font-weight: 500
     line-height: 18px
@@ -139,43 +190,80 @@
     text-align: left
     color: rgba(61, 60, 59, 1)
 
-.vector3
+.local-icon
     width: 12px
     height: 15px
     padding-right: 5px
 
-.vector4
+.markoff
     width: 15px
     height: 15px
     padding-right: 5px
 
-.date, .percent
-    width: 100px
-    height: 40px
-
 .schedule2
-    margin-top: 150px
+    margin-top: 150px 
+
+.schedule2 h2
+    font-family: Roboto
+    font-size: 32px
+    font-weight: 700
+    line-height: 38px
+    letter-spacing: 0em
+    text-align: left
+    color: rgba(68, 68, 68, 1)
 
 .sub-info-box 
     width: 200px
     height: 30px
-    padding-top: 9px
-    padding-left: 5px
     display: flex
     flex-direction: column
     text-align: center
+    padding-top: 9px
+    padding-left: 5px
 
 .sub-info-box2
     width: 200px
     height: 15px
-    padding-top: 5px
-    padding-right: 10px
     display: flex
     flex-direction: row
     text-align: left
+    padding-top: 5px
+    padding-right: 10px
 
+.professional2, .date2, .weight, .percent, .mass   
+    font-size: 14px
+    font-weight: 600
+    line-height: 21px
+    letter-spacing: 0em
+    align-items: center
+    color: rgba(255, 255, 255, 1)
 
+.date2, .percent, .mass
+    width: 60px
+    display: flex
+    flex-flow: row wrap
+    text-align: center
+    margin-bottom: 20px
     
+.date2   
+   margin-left: 20px
+
+.weight
+    margin-right: 50px
+
+.percent
+     margin-right: 40px
+
+.mass
+    margin-right: 20px
+  
+
+
+
+
+
+
+ 
 
 
 

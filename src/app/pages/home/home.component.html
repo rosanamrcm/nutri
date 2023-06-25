@@ -1,20 +1,17 @@
 <div class="container">
    <div class="login">
         <div class="logo">
-            <img src="../assets/icons/logo-primary.svg" alt="Nutri">
-            
+            <img src="../assets/icons/logo-primary.svg" alt="nutri">        
         </div>
-        <p class="register-name"> 
-            <input type="text" placeholder="Usuário" class="user"/>
-            <img src="../assets/icons/icon.png" alt="icon" class="icon">
-        </p>
-        <img src="../assets/icons/line.png" alt="line" class="line">
-        <p class="register-password"> 
-            <input type="text" placeholder="Senha" class="password"/>
-            <img src="../assets/icons/vector.png" alt="vector" class="vector">
-        </p>
-        <img src="../assets/icons/line.png" alt="line" class="line">
-        <button type="submit" class="button1">ENTRAR</button>
-        <button type="submit" class="button2">Criar conta</button>
+        <div class="register-name"> 
+            <input [(ngModel)]="user.email" type="text" placeholder="Usuário" class="username"/>
+            <img src="../assets/icons/user.svg" alt="user" class="user">
+        </div>
+        <div class="register-password"> 
+            <input [(ngModel)]="user.password" type="password" placeholder="Senha" class="password"/>
+            <img src="../assets/icons/hidden.svg" alt="hidden" class="hidden">
+        </div>  
+        <button type="submit" class="button1" (click)="getLogin()">ENTRAR</button>
+        <button type="submit" class="button2" routerLink="/register">Criar conta</button>
    </div>
 </div>

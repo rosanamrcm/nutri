@@ -7,6 +7,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoadingComponent } from './shared/loading/loading.component';
 import { SchedulingComponent } from './pages/scheduling/scheduling.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersService } from './core/services/users.service';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,10 +21,13 @@ import { SchedulingComponent } from './pages/scheduling/scheduling.component';
     SchedulingComponent
   ],
   imports: [
+    FormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UsersService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
